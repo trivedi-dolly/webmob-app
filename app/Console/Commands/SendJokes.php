@@ -31,9 +31,8 @@ class SendJokes extends Command
     public function handle()
     {
         $curretTime = Carbon::now()->format('H:i');
-        // dd($curretTime);
 
-        $users = User::whereTime('start_time', '<=', $curretTime)->whereTime('end_date', '>=', $curretTime)->get();
+        $users = User::whereTime('start_time', '<=', $curretTime)->whereTime('end_time', '>=', $curretTime)->get();
 
         foreach ($users as $user) {
             $jokes = Joke::inRandomOrder()->limit($user->jokes_no)->get();
