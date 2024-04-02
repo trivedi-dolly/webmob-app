@@ -12,8 +12,10 @@ Steps For Execution
 
 6. Open terminal and hit `php artisan serve` for project execution.
 
-7. Fill up the form details with required fields and send form.
+7. Open chrome and type localhost:8000 URL.
 
-8. Hit `php artisan send:joke` command for running cron job.
+8. Fill up the form details with required fields and send form.
+
+9. Hit `php artisan send:joke` command for running cron job.
 
 Note: There's use of UTC timezone so kindly test according to that.
